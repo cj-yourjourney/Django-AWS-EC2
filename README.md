@@ -41,8 +41,6 @@ sudo apt-get upgrade -y
 # Install Python and essential tools
 sudo apt-get install -y python3-pip python3-dev nginx git
 
-# Install virtual environment
-sudo pip3 install virtualenv
 ```
 
 ## Step 4: Set Up Project Environment
@@ -146,10 +144,6 @@ server {
 sudo ln -s /etc/nginx/sites-available/your_project /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
-
-sudo systemctl daemon-reload 
-sudo systemctl restart gunicorn
-sudo systemctl restart nginx 
 ```
 
 ## Step 9: Set Up SSL (Optional)
@@ -190,8 +184,3 @@ sudo certbot --nginx -d your-domain.com
 - The guide assumes an Ubuntu-based EC2 instance
 - Adjust commands for other Linux distributions as needed
 ```
-
-- Additional notes and troubleshooting tips
-- Consistent formatting
-
-You can directly copy this into your GitHub repository's README.md file. Would you like me to make any further modifications?
