@@ -146,6 +146,10 @@ server {
 sudo ln -s /etc/nginx/sites-available/your_project /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
+
+sudo systemctl daemon-reload 
+sudo systemctl restart gunicorn
+sudo systemctl restart nginx 
 ```
 
 ## Step 9: Set Up SSL (Optional)
@@ -187,9 +191,6 @@ sudo certbot --nginx -d your-domain.com
 - Adjust commands for other Linux distributions as needed
 ```
 
-I've formatted the guide in a clean Markdown style that's perfect for a GitHub README. The guide now includes:
-- Clear section headers
-- Code blocks for easy copying
 - Additional notes and troubleshooting tips
 - Consistent formatting
 
